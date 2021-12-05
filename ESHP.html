@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index.follow">
+    <meta name="descripttion" content="我的試作網頁">
+    <!--將CSS寫在HTML裡不好管理，可以用 STYLE TYPE="text/css" (CSS的CLASS選擇器) 做統整-->
+    <!-- 寫在文件內的叫internal css←→ 外部的叫external css-->
+    <!--覆蓋順序依照 讀取的先後順序
+    (因為css有三樣優先順序規則，其中第一項是階層，也就是後寫的覆蓋先寫的
+    ；第二個規則是特定度規則，指定id優先於class優先於tag優先於繼承規則...) 
+    ；第三項是繼承規則，指定母元素後子元素也都會被影響，設定於子元素本身的設定會覆蓋母元素的設定    
+    -->
+    <link rel="stylesheet" href="./eshp.css">
+     <style type="text/css">
+        table
+        {border-color: black;
+        border-collapse: collapse;}
+        th
+        {padding:10px;}
+        .tdtitle
+        {text-align: center;
+         padding: 10px;}
+        .tdcontent
+        {padding:10px;}
+        .contentkeyword
+        {padding:10px;color: brown;font-size: 20px;}    
+        .box 
+        {position: sticky;right:0px ;top: 0px;
+        width: 100px;height: 100px;background-color: palegreen;
+        s}
+        .box2
+        {position: relative;left:1000px ;top: 0px;
+        width: 100px;height: 100px;background-color: palegreen;}
+    </style>
+    
+    <!--CSS語法 absolute不會讓div卡在螢幕上,要用postition:sticky-->
+        <title>MyeasyHP</title>
+</head>
+<body>
+    <h1>標題試作</h1>
+    <h2 class="title">超連結+表格試作</h2>
+            <table border="1">
+            <tr>
+            <th>我愛的網頁</th>
+            <th width="450" >描述</th>
+            </tr>
+            <tr>
+                <td><a href="https://www.google.com" target="_blank"><p class="tdtitle">Google</p></a></td>
+                <td><p class="tdcontent">世界上最好用的搜尋引擎</p></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/en-US/" target="_blank"><b><p class="tdtitle">MDN Website Docs</p></a></td>
+                <td><p class="tdcontent">HTML程式碼的教科書</p></td>
+            </tr>
+            <tr>
+                <td><a href="https://ithelp.ithome.com.tw/articles/10194994" target="_blank"><b><p class="tdtitle">前端工程師心得</p></a></td>
+                <td><p class="tdcontent">網路上同志發表的轉職心得，勵志。</p></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+    <!--Style裡面可以指定 DIV 的寬度和高度，但不能用在span上-->
+    <div class="title"style="font-weight: bold;font-size: 28px;">CSS基本練習</div>
+    <div style="height:200px; width:600px; padding:10px;margin-top: 10px;margin-bottom: 10px;border-style: solid;">
+        今天是
+        <span class="contentkeyword">
+        2021年11月12日
+        </span>
+        星期五
+        <br>
+        <p>現在時間是<b class="contentkeyword">下午4點</b>等等要去打工了，QQ</p>
+    </div>
+    <div class="box"></div>
+    <div class="box2"></div>
+
+    <form action="" method="get" >
+        <label for="myname" >姓名： </label>
+        <input type="text" id="myname" name="inputName" Placeholder="真實姓名" required>
+    <br>
+        <label for="happiness">滿意度</label>
+        <input type="range" max="10" min="1" id="happiness "name="滿意度" value="10" required>
+    <br>
+        <label for="formdate">日期</label>
+        <input type="date" id="formdate" name="timeis" required>
+    <br>
+        <label for="filetesting">上傳圖片：</label>
+        <input type="file" id="filetesting" name="mypicture" accept=".jpg,.png">
+    <br>
+        <input type="radio" name="gender" value="male" >男
+        <input type="radio" name="gender" value="female" checked>女
+        <input type="radio" name="gender" value="other">其他
+    <br>
+    年紀：<input type="number" name="age" value="18" min="0" max="120" step="1">
+    <br>
+    密碼：<input type="password" minlength="8" maxlength="25" name="fakepassword">
+    <br>
+    你來自哪裡？
+    <select name="City" required>
+        <option></option>
+        <option value="新竹">新竹</option>
+        <option value="台北">台北</option>
+        <option value="高雄">高雄</option>
+    </select>
+    <br>
+    你最喜歡的數字？
+    <label for="favnumber"></label>
+    <input type="text" list="numberlist" name="Myfavnumber" id="favnumber">
+    <datalist id="numberlist">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="13">13</option>
+    </datalist>
+    <br>
+    <button><image height="100" width="150" src="./薩克2.png" alt="ZacisWatching"></image></button>
+    </form>
+</body> 
+</html>

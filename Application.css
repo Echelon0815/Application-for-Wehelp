@@ -1,0 +1,17 @@
+td {
+  text-align: center;
+}
+#pageheader {
+  float: left;
+  width: 92%;
+}
+#photo {
+  float: right;
+  width: 8%;
+}
+#contact {
+  float: right;
+}
+img.Picture {
+  cursor: pointer;
+}

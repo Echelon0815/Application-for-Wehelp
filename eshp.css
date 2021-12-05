@@ -1,0 +1,44 @@
+/*這是hi&tablel顏色設定*/
+h1 {
+  color: rgba(76, 68, 179, 0.699);
+  font-size: 20;
+  background-color: bisque;
+}
+table {
+  border-color: orange;
+  border-collapse: collapse;
+  ;
+}
+
+/* css 選擇器 */
+
+/* universal selector 所有物件都被選擇 
+  EX. 
+  *:{color:red} 
+*/
+
+/*id selector 選擇有此id的標籤 (一個標籤只能有一個獨一無二的id) 
+    <p id="myname" > # + id名稱 {}
+    EX.#myname {color: brown;} 
+*/
+
+/* class selector 選擇有此class(類別)的標籤 
+一個標籤可以有多個class 
+
+    . + class名稱 {} 
+   <P class="text speechtext name" > 
+   EX. 
+    p.text {color: aqua;} 
+*/
+
+/* descendent selector (後裔選擇器) 
+   EX.div標籤內涵 h1 標籤
+    div.h1 {} 
+*/
+
+/* attribute selector 
+
+   選擇標籤內特定的attribute(例如type)做選擇 
+  EX.
+  input[type="text"] {color: aliceblue;} 
+*/
